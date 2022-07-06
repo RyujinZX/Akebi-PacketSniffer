@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\sniffer\filter\comparers.cpp" />
+    <ClCompile Include="src\sniffer\filter\FilterManager.cpp" />
+    <ClCompile Include="src\sniffer\gui\ScriptEditor.cpp" />
+    <ClCompile Include="src\sniffer\gui\util.cpp" />
+    <ClCompile Include="src\sniffer\script\MemoryScript.cpp" />
+    <ClCompile Include="src\sniffer\script\FileScript.cpp" />
+    <ClCompile Include="src\sniffer\script\lua_wrappers.cpp" />
+    <ClCompile Include="src\sniffer\packet\Packet.cpp" />
+    <ClCompile Include="src\sniffer\pipe\PipeHandler.cpp" />
+    <ClCompile Include="src\sniffer\pipe\PipeClient.cpp" />
+    <ClCompile Include="src\sniffer\pipe\PipeServer.cpp" />
+    <ClCompile Include="src\sniffer\proto\ProtoWriter.cpp" />
+    <ClCompile Include="src\sniffer\proto\ProtoMessage.cpp" />
+    <ClCompile Include="src\sniffer\gui\PacketModifyWnd.cpp" />
+    <ClCompile Include="src\sniffer\packet\PacketManager.cpp" />
+    <ClCompile Include="src\sniffer\gui\PacketView.cpp" />
+    <ClCompile Include="src\sniffer\gui\PacketFlag.cpp" />
+    <ClCompile Include="src\sniffer\gui\LoggerWnd.cpp" />
+    <ClCompile Include="src\sniffer\gui\ScriptManagerWnd.cpp" />
+    <ClCompile Include="src\sniffer\filter\FilterLua.cpp" />
+    <ClCompile Include="src\sniffer\gui\FilterWnd.cpp" />
+    <ClCompile Include="src\sniffer\gui\FavoritePacketWnd.cpp" />
+    <ClCompile Include="src\sniffer\gui\SettingsWnd.cpp" />
+    <ClCompile Include="src\sniffer\gui\CapturePacketWnd.cpp" />
+    <ClCompile Include="src\sniffer\gui\PacketWndBase.cpp" />
+    <ClCompile Include="src\sniffer\filter\FilterGroup.cpp" />
+    <ClCompile Include="src\sniffer\filter\FilterSelector.cpp" />
+    <ClCompile Include="framework\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\sniffer\pipe\PipeIO.cpp" />
+    <ClCompile Include="src\sniffer\pipe\messages\PipeMessage.cpp" />
+    <ClCompile Include="src\sniffer\pipe\messages\PipeModifyData.cpp" />
+    <ClCompile Include="src\sniffer\pipe\messages\PipePacketData.cpp" />
+    <ClCompile Include="src\sniffer\proto\PacketParser.cpp" />
+    <ClCompile Include="src\sniffer\proto\ProtoParser.cpp" />
+    <ClCompile Include="src\sniffer\gui\SnifferWnd.cpp" />
+    <ClCompile Include="src\sniffer\Config.cpp" />
+    <ClCompile Include="src\sniffer\script\LuaScript.cpp" />
+    <ClCompile Include="src\sniffer\script\Script.cpp" />
+    <ClCompile Include="src\sniffer\script\ScriptManager.cpp" />
+    <ClCompile Include="src\sniffer\script\ScriptSelector.cpp" />
+    <ClCompile Include="src\sniffer\sniffer.cpp" />
+    <ClCompile Include="vendor\ImGuiColorTextEdit\TextEditor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\sniffer\filter\comparers.h" />
+    <ClInclude Include="src\sniffer\filter\FilterManager.h" />
+    <ClInclude Include="src\sniffer\filter\IFilterContainer.h" />
+    <ClInclude Include="src\sniffer\gui\ScriptEditor.h" />
+    <ClInclude Include="src\sniffer\gui\util.h" />
+    <ClInclude Include="src\sniffer\Profiler.h" />
+    <ClInclude Include="src\sniffer\script\MemoryScript.h" />
+    <ClInclude Include="src\sniffer\script\FileScript.h" />
+    <ClInclude Include="src\sniffer\script\lua_wrappers.h" />
+    <ClInclude Include="src\sniffer\pipe\PipeHandler.h" />
+    <ClInclude Include="src\sniffer\packet\ModifyType.h" />
+    <ClInclude Include="src\sniffer\packet\NetIODirection.h" />
+    <ClInclude Include="src\sniffer\packet\Packet.h" />
+    <ClInclude Include="src\sniffer\packet\IPacketHandler.h" />
+    <ClInclude Include="src\sniffer\packet\RawPacketData.h" />
+    <ClInclude Include="src\sniffer\pipe\PipeClient.h" />
+    <ClInclude Include="src\sniffer\pipe\PipeServer.h" />
+    <ClInclude Include="src\sniffer\proto\ProtoWriter.h" />
+    <ClInclude Include="src\sniffer\proto\ProtoMessage.h" />
+    <ClInclude Include="src\sniffer\gui\PacketModifyWnd.h" />
+    <ClInclude Include="src\sniffer\packet\PacketManager.h" />
+    <ClInclude Include="src\sniffer\gui\PacketView.h" />
+    <ClInclude Include="src\sniffer\gui\PacketFlag.h" />
+    <ClInclude Include="src\sniffer\gui\LoggerWnd.h" />
+    <ClInclude Include="src\sniffer\gui\ScriptManagerWnd.h" />
+    <ClInclude Include="src\sniffer\filter\FilterLua.h" />
+    <ClInclude Include="src\sniffer\gui\FilterWnd.h" />
+    <ClInclude Include="src\sniffer\gui\FavoritePacketWnd.h" />
+    <ClInclude Include="src\sniffer\gui\SettingsWnd.h" />
+    <ClInclude Include="src\sniffer\gui\CapturePacketWnd.h" />
+    <ClInclude Include="src\sniffer\gui\PacketWndBase.h" />
+    <ClInclude Include="src\sniffer\filter\IFilterComparer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\sniffer\filter\FilterGroup.h" />
+    <ClInclude Include="src\sniffer\filter\FilterSelector.h" />
+    <ClInclude Include="src\sniffer\filter\IFilter.h" />
+    <ClInclude Include="framework\pch.h" />
+    <ClInclude Include="src\sniffer\gui\IWindow.h" />
+    <ClInclude Include="src\sniffer\pipe\PipeIO.h" />
+    <ClInclude Include="src\sniffer\pipe\messages\PipeMessage.h" />
+    <ClInclude Include="src\sniffer\pipe\messages\PipeModifyData.h" />
+    <ClInclude Include="src\sniffer\pipe\messages\PipePacketData.h" />
+    <ClInclude Include="src\sniffer\proto\PacketParser.h" />
+    <ClInclude Include="src\sniffer\proto\ProtoParser.h" />
+    <ClInclude Include="src\sniffer\gui\SnifferWnd.h" />
+    <ClInclude Include="src\sniffer\Config.h" />
+    <ClInclude Include="src\sniffer\script\LuaScript.h" />
+    <ClInclude Include="src\sniffer\script\LuaScript_tplt.hpp" />
+    <ClInclude Include="src\sniffer\script\Script.h" />
+    <ClInclude Include="src\sniffer\script\ScriptManager.h" />
+    <ClInclude Include="src\sniffer\script\ScriptSelector.h" />
+    <ClInclude Include="src\sniffer\sniffer.h" />
+    <ClInclude Include="vendor\ImGuiColorTextEdit\TextEditor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PacketSniffer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="C:\Users\strog\Desktop\Git repositories\genshin-cheat\cheat-library\res\Ruda-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cheat-base\cheat-base.vcxproj">
+      <Project>{adb35022-823b-4dc0-b495-3efefbd3a82f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d92a737d-bc48-469c-b4e2-bc64f4418a93}</ProjectGuid>
+    <RootNamespace>PacketSniffer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)-$(PlatformShortName)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS; WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)framework\;$(ProjectDir)vendor\ImGuiColorTextEdit\;$(SolutionDir)cheat-base\src\;$(SolutionDir)cheat-base\vendor\magic_enum\include\;$(SolutionDir)cheat-base\vendor\imgui\;$(SolutionDir)cheat-base\vendor\fmt\include\;$(SolutionDir)cheat-base\vendor\json\single_include\;$(SolutionDir)cheat-base\vendor\simpleIni\</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cheat-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)framework\;$(ProjectDir)vendor\ImGuiColorTextEdit\;$(SolutionDir)cheat-base\src\;$(SolutionDir)cheat-base\vendor\magic_enum\include\;$(SolutionDir)cheat-base\vendor\imgui\;$(SolutionDir)cheat-base\vendor\fmt\include\;$(SolutionDir)cheat-base\vendor\json\single_include\;$(SolutionDir)cheat-base\vendor\simpleIni\</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cheat-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS; _DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)framework\;$(ProjectDir)vendor\ImGuiColorTextEdit\;$(SolutionDir)cheat-base\src\;$(SolutionDir)cheat-base\vendor\magic_enum\include\;$(SolutionDir)cheat-base\vendor\imgui\;$(SolutionDir)cheat-base\vendor\fmt\include\;$(SolutionDir)cheat-base\vendor\json\single_include\;$(SolutionDir)cheat-base\vendor\simpleIni\</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cheat-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS; NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)framework\;$(ProjectDir)vendor\ImGuiColorTextEdit\;$(SolutionDir)cheat-base\src\;$(SolutionDir)cheat-base\vendor\magic_enum\include\;$(SolutionDir)cheat-base\vendor\imgui\;$(SolutionDir)cheat-base\vendor\fmt\include\;$(SolutionDir)cheat-base\vendor\json\single_include\;$(SolutionDir)cheat-base\vendor\simpleIni\</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cheat-base.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
